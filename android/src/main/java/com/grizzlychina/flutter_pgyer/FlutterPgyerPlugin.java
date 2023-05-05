@@ -2,8 +2,8 @@
  * @Author: zdd
  * @Date: 2023-04-28 15:15:45
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-28 17:35:57
- * @FilePath: /grizzly_app/packages/flutter_pgyer/android/src/main/java/com/grizzlychina/flutter_pgyer/FlutterPgyerPlugin.java
+ * @LastEditTime: 2023-05-05 14:03:45
+ * @FilePath: /flutter_pgyer/android/src/main/java/com/grizzlychina/flutter_pgyer/FlutterPgyerPlugin.java
  * @Description: 
  */
 package com.grizzlychina.flutter_pgyer;
@@ -51,7 +51,7 @@ public class FlutterPgyerPlugin implements FlutterPlugin, ActivityAware, MethodC
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals(kPgyerCheckUpdateMethod)) {
       Log.d(TAG, "CheckUpdate");
-      PgyerSDKManager.checkSoftwareUpdate(mActivity);
+      PgyerSDKManager.checkSoftwareUpdate();
     } else if (call.method.equals(kPgyerReportExceptionMethod)) {
       if (call.hasArgument("name")){
         String name = call.argument("name");
